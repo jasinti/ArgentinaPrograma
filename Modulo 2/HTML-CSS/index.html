@@ -1,0 +1,462 @@
+<!DOCTYPE html><!--version 5 de html-->
+<!-- esto es un comentario en HTML -->
+
+
+
+<html lang="es"><!--comentario-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* selector de etiqueta */
+        body
+        {
+            /* background-color: rgb(247,233,142); */
+            /* background-color: yellow; */
+            /* background-color: #ff0; */
+            /* background-color: #ffff00; */
+            background-color: bisque;
+            /* background-color: #deb887; */
+            /* background-color: #25898F; */
+
+        }
+
+        p
+        {
+            text-align: justify;
+        }
+
+        /* selector de id */
+        #parrafo1
+        {
+            font-family: 'Corinthia', cursive;
+            font-size: 20px;
+            /* color: #800000; */
+            /* color: rgb(100, 217, 170); */
+            color: #06BFB5;
+            /* color:seashell; */
+        }
+
+        /* selector de clase */
+        .tachado
+        {
+            text-decoration: line-through;
+        }
+        
+        .subrayado
+        {
+            text-decoration: underline;
+        }
+        .negrita
+        {
+            font-weight: bolder;
+        }
+
+        h1
+        {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        h3
+        {
+            font-family: 'Courgette', cursive;
+        }
+
+        img#icono {
+            width: 5%;
+        }
+
+        
+
+        @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Archivo+Black&family=Comforter+Brush&family=Cookie&family=Corinthia:wght@400;700&family=Courgette&family=Luxurious+Script&family=Oswald:wght@600&display=swap');
+
+    </style>
+
+    <link rel="stylesheet" href="otracarpeta/estilos.css">
+    <link rel="stylesheet" href="">
+    
+</head>
+<body>
+    <!-- <h1 style='color: rgb(238, 238, 113)'>Titulo 1</h1> -->
+    <!-- <h1 style='color: #ff004f'>Titulo 1</h1> -->
+    <h1 style='color: darkorange'>Titulo 1</h1>
+    <h2 class='subrayado'>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <h4>Titulo 4</h4>
+    <h5>Titulo 5</h5>
+    
+    <!-- hr: horizontal row -->
+    <hr><!--comentario valido en HTML-->
+
+
+    <p id="parrafo1">Lorem ipsum dolor <span class="negrita">ESTE TEXTO ESTA EN NEGRITA</span>sit amet consectetur adipisicing elit. <em>este texto esta en cursiva</em>Debitis doloremque <strong>nostrum nesciunt odit ipsam</strong> iusto ex <span class="subrayado">este texto esta subrayado</span>dolore aliquid ullam incidunt, nemo esse rerum <span class='tachado'>este texto esta tachado</span>nulla quisquam sapiente, velit maiores modi. Quisquam.</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae delectus odit architecto eius facilis nihil itaque temporibus, odio vitae numquam, ab illo dolor, ipsum eveniet? Odit dicta necessitatibus sit suscipit?</p>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non voluptatibus tempore iusto nesciunt provident iste nobis voluptatum, ducimus ea ipsam. Voluptatem hic totam aliquam culpa. Sit architecto eius incidunt consequatur?</p>
+
+    <br><br><br>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto magnam magni facere, eum ex ratione nostrum velit sequi sed asperiores necessitatibus aliquam dicta alias excepturi commodi error natus expedita laborum!</p>
+
+    <hr>
+    <!-- hr: horizontal row -->
+    
+    <!-- ul: unorder list -->
+    <ul type='square'>
+        <li>Argentina</li><!--li: list item-->
+        <li>Brasil</li>
+        <li>Uruguay</li>
+    </ul>
+
+    <!-- ol: order list -->
+    <ol type='I'>
+        <li>Java</li>
+        <li>PHP</li>
+        <li>Javascript</li>
+    </ol>
+
+    <hr>
+
+    <table id='tabla1' border="1">
+        <tr><!--tr: table row-->
+            <th>Nombre</th><!--th: table header-->
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan</td><!--td: table division-->
+            <td>Perez</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Garcia</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table id='tabla2' border="1">
+        <tr><!--tr: table row-->
+            <th>Nombre</th><!--th: table header-->
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan</td><!--td: table division-->
+            <td>Perez</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Garcia</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table id='tabla3' border="1">
+        <tr><!--tr: table row-->
+            <th>Nombre</th><!--th: table header-->
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+        <tr>
+            <td>Juan</td><!--td: table division-->
+            <td>Perez</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Garcia</td>
+            <td>30</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Vinculo Absoluto</h2>
+    <a href="http://www.google.com" target="_blank">
+        Ir a Google <br>
+        <img id='icono' src="imagenes/icono.png" alt="" title="icono de Google"> 
+    </a>
+
+    <br />
+
+    <!-- vinculo relativo: va a otra pagina de mi propio sitio  -->
+    <h2>Vinculo Relativo</h2>
+    <a href="destino.html" target="_blank">Ir a otra pagina
+        de mi sitio</a>
+
+    <br />
+
+    <!-- 
+        anclajes: es un vinculo a otro sector de la misma pagina que estoy navegando.
+        
+        En word y pdf se denominan hipervinculos pero en HTML son anclajes
+
+        Hay 2 tipos de anclajes:
+        1) anclaje al comienzo de la pagina: se hace con <a href="#">
+        2) anclaje a cualquier otro lugar de la pagina: se hace con <a href="#nombre">
+        y la etiqueta a la cual se salta debe tener id="nombre"
+    -->
+    <h2>Anclajes</h2>
+    <h3 id='parrafo'>Inicio del parrafo</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        Magnam qui porro possimus minima, impedit fuga
+        commodi incidunt rerum cumque.Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Labore architecto officiis in delectus
+        expedita error aliquam voluptate ut distinctio.
+        </p>
+
+    <a href="#">Ir al comienzo de la pagina</a>
+
+    <br>
+
+    <a href="#parrafo">Ir al comienzo del parrafo</a>
+
+    <hr>
+
+    <h2>Formulario</h2>
+                <form name='f1' action="destino.html">
+                    <label>Nombre</label>
+                    <br /><br />
+                    <input type="text" name="nombre"
+                        id="nombre"
+                        placeholder="escriba aqui su nombre"
+                         required>
+                    <br />
+                    <label>Email</label> <br /><br />
+                    <input type="email" name="email"
+                        id="email"
+                        placeholder="escriba aqui su email"
+                        required />
+                    <br /><br />
+                    <!-- &nbsp; (new bar space) es una entitie q permite hacer un espacio
+                    en la misma linea. En este caso permite separar con un espacio los 
+                    botones de submit(Enviar) y reset(Cancelar)-->
+                    <input type="submit"
+                        value="Enviar" />&nbsp;<input
+                        type="reset" value="Cancelar" />
+                </form>
+
+
+
+    
+</body>
+</html>

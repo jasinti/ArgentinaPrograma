@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+    <style>
+
+        /*
+            medidas relativas: escalan mejor en tablets, celulares y monitores
+            rem (tamaño de la fuente respecto al elemento raíz del documento 
+            -etiqueta html-)
+            em (altura de la fuente por defecto del elemento actual)
+            % (porcentaje)
+
+            medidas absolutas: estan en desuso. Solo de uso didactico
+            px (pixeles)
+            ex (altura de la letra x minúscula) 
+            in (pulgadas) 
+            cm (centímetros) 
+            mm (milímetros) 
+            pt (puntos, 1 punto es lo mismo que 1/72 pulgadas) 
+            pc (picas, 1 pc es lo mismo que 12 puntos)
+
+            La unidad em(altura de la fuente) tiene como referencia de medida 
+            el font-size del elemento actual.
+    
+            La unidad rem(root em)tiene como referencia de medida el font-size 
+            del elemento root, es decir, la etiqueta <html>.
+            Por defecto, si no se indica lo contrario:
+            1rem = 100% = 16px
+
+            Cuando queremos calcular de manera precisa el tamaño en píxeles que 
+            debe tener un elemento, es mucho más fácil fiarse de rem, porque 
+            tenemos que mirar un único valor. 
+            
+            Sin embargo cuando usamos em tenemos que observar cuál es el tamaño
+            de la fuente en el elemento, que puede ser variable, atendiendo a 
+            muchos factores como la jerarquía de etiquetas.
+
+            Como regla general tengamos en cuenta:
+            
+            •	Si estamos haciendo un estilo que pretendemos utilizar en 
+            muchos elementos distintos, por ejemplo una class de CSS que 
+            pretendes usar en varias partes, es mejor usar rem.
+
+            •	Si lo que queremos es que el tamaño sea variable en función de 
+            dónde estés usando el estilo, usamos em. Aunque este segundo caso 
+            es menos habitual.
+
+        */
+        
+        body
+        {
+            width: 50%;
+            margin: auto;
+            background-color: moccasin;
+            font-family: 'Trebuchet MS';
+        }
+
+       
+
+        #caja1 
+        {
+            font-size: 24px;
+            background-color: lavenderblush;
+            width: 30%;
+            /* 2em en este caso equivale a 24px * 2 = 48px (es decir, el doble 
+            del tamaño de font-size configurado para este elemento) */
+            padding: .25em;
+            margin-bottom: 1.5em; /* 1.5 x 24px = 36px -> distancia con la caja de abajo */
+            border: mediumvioletred 0.25em solid;/* 0.25 * 24px = 6px */
+            box-sizing: content-box;
+        }
+
+        #caja2 
+        {
+            font-size: 24px;
+            background-color: palegoldenrod;
+
+            /* 2rem en este caso equivale a 16px * 2 = 32px (es decir, el doble 
+            del tamaño de font-size configurado para este elemento) */
+            padding: 2rem;
+            border: mediumvioletred .25rem solid;/* 0.25 * 16px = 4px */
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="caja1">Seccion 1</section>
+    <section id="caja2">Seccion 2</section>
+</body>
+</html>

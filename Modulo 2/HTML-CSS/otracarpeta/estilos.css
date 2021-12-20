@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comforter+Brush&family=Cookie&family=Corinthia:wght@400;700&family=Luxurious+Script&family=Oswald:wght@600&display=swap');
+
+
+/* selectores de id */
+#tabla1
+{
+    width: 90%;
+    background-color: aquamarine;
+}
+
+#tabla2
+{
+    width: 50%;
+    background-color: darkkhaki;
+}
+
+#tabla3
+{
+    width: 75%;
+    background-color: darksalmon;
+}
+
+/* selector de id */
+h2
+{
+    font-family: 'Architects Daughter', cursive;
+    color: khaki;
+}

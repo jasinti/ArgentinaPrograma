@@ -1,0 +1,11 @@
+Selectores Basicos de CSS
+	--> Eligen cual o cuales etiquetas HTML seran afectadas por las reglas de estilos.
+
+	--> Selector de etiqueta: se usa cuando quiero afectar a todas las etiquetas del mismo tipo.
+		Ej: que todos los parrafos esten alineados al centro
+
+	--> Selector de ID: se usa cuando quiero afectar con una determinada regla de estilos a una unica etiqueta.
+	Ej: que solamente una etiqueta h2 este subrayada
+	
+	--> Selector de Clase: se usa cuando quiero afectar con las mismas reglas de estilos a etiquetas de diferente tipo.
+	Ej: que el texto encerrado en la etiqueta span y que la etiqueta h1 esten marcadas con un mismo color.  

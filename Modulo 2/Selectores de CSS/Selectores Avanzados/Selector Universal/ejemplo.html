@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Universal -  Ejemplo 2</title>
+    <style>
+        /* El asterisco indica selector universal: significa que todos
+        los elementos del HTML "amaneceran" con estas reglas de estilo */
+        * {
+            color:#00F;/*color de la fuente*/
+            margin:0;/*separacion con los elementos vecinos*/
+            padding:0;/*separacion entre el contenido interno y el perimetro del elemento*/
+          }
+
+          /* creo una clase que ponga texto en rojo y la uso en el parrafo
+          "anulando" el color original de azul impuesto por el selector 
+          universal. */
+          .textoRojo
+          {
+              color: #F00;
+          }
+
+    </style>
+</head>
+<body>
+    <h1>Título de nivel 1</h1>
+    <h2>Título de nivel 2</h2>
+    <p class="textoRojo">Esto esta dentro de un párrafo</p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* selector universal para que todos los elementos html "amanezcan" sin margin
+ ni padding */
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font:14px Verdana, Arial, sans-serif;
+	background-color:#333;
+	width:1050px;/*el body no ocupa todo el ancho de la pantalla*/
+	margin:auto;/*centrado del body*/
+}
+main, header, nav, footer
+{
+	/*nos permite optimizar la visualización de este sitio en varios 
+	navegadores*/
+	display:block;
+}
+header{
+	height:150px;
+	padding-left:50px;/*espacio entre el texto y el lado interno izquierdo*/
+	line-height:150px;/*altura del interlineado*/
+	background-color:#3b3;
+}
+nav{
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	font-weight:bold;
+	background-color:#090;
+	color:#fff;
+	}
+main{
+	padding:25px;
+	background-color:#DDD;
+	}
+footer{
+	height:100px;
+	background-color:#1a1;
+	color:#fff;
+	padding:25px;/*espacio entre el texto del footer y el perimetro interno*/
+	text-align:right;
+}
+section{
+	border: 1px dashed rgb(51, 51, 51);
+	padding: 25px;/*espacio entre el texto del section y su perimetro interno*/
+	margin-bottom:25px;/*espacio con el elemento vecino de abajo*/
+}
+article{
+	background-color:#444;
+	color:#fff;
+	margin-bottom:25px;/*espacio con el elemento vecino de abajo*/
+	padding:25px;
+}
+#noticias{
+	border:5px dotted #777;/*dashed: linea rayada*/
+	
+}
+/* selector descendiente */
+#noticias article{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	color: gray;
+}

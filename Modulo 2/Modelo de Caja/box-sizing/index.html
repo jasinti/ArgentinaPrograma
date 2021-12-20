@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Relleno o Padding</title>
+    <style>
+        /*propiedad padding(relleno): es la distancia entre el contenido de la caja 
+        y el perimetro de la caja*/
+        div
+        {
+            width: 400px;
+            height: 300px;
+            text-align: justify;
+            color: maroon;
+            font-weight: bolder;
+            font-size: 1em;/* 1em = 16px */
+            margin: auto;/* centrado de las cajas*/
+            margin-bottom: 30px;/* margen con la caja adyacente(vecina) inferior*/
+        }
+
+        #caja1
+        {
+            background-color: lightgoldenrodyellow;
+            
+            /*sin padding entre el contenido y el perimetro de la caja y sin borde*/
+            padding: 0;
+            border: 0;
+        }
+        
+        #caja2
+        {
+            background-color: moccasin;
+
+            /* 
+                padding entre el contenido y el perimetro entero de la caja
+                de 20px
+            */
+            padding: 20px;
+
+            /* borde  de la caja de 10px */
+            border: 10px red solid;
+
+            /*
+                La caja 2 se "ensancha" 40 px(20 px de padding a derecha e izquierda)respecto
+                mas 20 px(10 px de borde a derecha e izquierda).
+            /* 
+                box-sizing: content-box --> ancho total =ancho del contenido + padding + borde    
+                ancho total = 400px(width del contenido) + 40px(padding) + 20px(borde)
+                ancho total= 460 px.
+
+                Para el alto el analisis es idem que para el ancho.
+            */
+            box-sizing: content-box;
+        }
+
+        #caja3
+        {
+            
+            padding: 20px;
+
+            /* borde  de la caja de 10px */
+            border: 10px green solid;
+
+            /*
+                La caja 3 NO se ensancha respecto de la caja 1 , sino que queda igual
+                gracias al  .
+
+                box-sizing: border-box --> ancho = width de la caja(el padding 
+                y el borde estan incluidos en ese ancho de la caja)    
+                ancho = 400px(width del contenido)
+                ancho = 400 px
+            */
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="caja1">Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Ipsa est natus doloremque nihil
+        similique, corrupti enim fugit a, possimus laborum
+        quibusdam ex. Soluta, doloremque natus? Sint
+        corporis illo autem esse.</div>
+
+        <div id="caja2">Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Ipsa est natus doloremque nihil
+            similique, corrupti enim fugit a, possimus laborum
+            quibusdam ex. Soluta, doloremque natus? Sint
+            corporis illo autem esse.</div>
+
+        <div id="caja3">Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Ipsa est natus doloremque nihil
+            similique, corrupti enim fugit a, possimus laborum
+            quibusdam ex. Soluta, doloremque natus? Sint
+            corporis illo autem esse.</div>
+</body>
+
+</html>

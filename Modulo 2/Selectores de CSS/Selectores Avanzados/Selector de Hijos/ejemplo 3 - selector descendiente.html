@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 3 - Selector Descendiente</title>
+    <style>
+        /* Selectores descendientes: Cuando se definen dos elementos HTML seguidos
+         por uno o más espacios en blanco, las propiedades afectan a los elementos 
+         con el segundo elemento contenidos dentro del primer elemento, aunque haya 
+         etiquetas intermedias */
+        li em 
+            {
+                color: #f00;
+            }
+    </style>
+</head>
+
+<body>
+    <!-- Esta 1er etiqueta <em> no se pinta de rojo porque no esta dentro de una etiqueta <li> -->
+    <h1>Esto es una <em>prueba</em>.</h1>
+
+    <!-- Las siguientes etiquetas <em> si se pintan de rojo porque estan dentro de una etiqueta <li> -->
+    <ul>
+        <li>Opción 1 (es la más <em>fácil</em>)</li>
+        <li>Opción 2 (es de dificultad <em>media<em>)</li>
+        <li>Opción 3 (muy <em>compleja</em>)</li>
+    </ul>
+
+</body>
+
+</html>
