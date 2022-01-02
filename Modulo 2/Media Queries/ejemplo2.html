@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 6</title>
+    <style>
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+body{
+	background-color: #A8F0FD;
+	font-family: Tahoma;
+}
+
+h2{
+	background-color: #333;
+	color:#fff;
+	text-align: center;
+	padding: 3px;
+	margin-bottom: 30px;
+}
+
+.contenedor{
+    width:100%;/*A pantalla completa, el contenedor(section) ocupa todo el ancho
+    del body*/
+    margin: auto;
+}
+
+.caja1{
+	width:70%;
+	height:300px;
+    background-color:red;
+    margin: auto;
+	
+}
+
+.caja2{
+	width:70%; 
+	height: 300px;
+    background-color:#D2E741;
+    margin: auto;
+	
+}
+
+/* 
+	Cuando el alto de la pantalla(orientacion horizontal) desciende por debajo 
+	de 700px, entonces se hacen flotar las cajas y el ancho de las cajas ocupa 
+	el 90% del contenedor.
+    
+    Si la pantalla supera los 700px, entonces se dejan de flotar las cajas 
+*/
+
+/* @media screen and (max-height:700px) and (orientation: landscape) */
+@media screen and (min-width:700px) 
+{
+    .contenedor
+    {
+		width: 90%;
+        margin:auto;
+    }
+    
+    
+	.caja1, .caja2{
+		float: left;
+        width: 50%;/*cada caja ocupa el 50% del ancho del contenedor(section)*/
+        height: 50vh;/*ambas cajas ocupan el 80% de altura del viewport*/
+	}
+}
+        
+    </style>
+</head>
+<body>
+    <h2>Ejemplo</h2>
+
+	<section class="contenedor">
+		<article class="caja1">Caja 1</article>
+		<article class="caja2">Caja 2</article>
+	</section>
+</body>
+</html>

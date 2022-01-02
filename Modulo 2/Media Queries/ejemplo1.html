@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- 
+        El viewport es el area visible de la pantalla del dispositivo que
+        carga la pagina web(celular, tablet o PC)
+
+        Podemos configurar el viewport para ajustarse dinámicamente al tamaño 
+        de cada dispositivo usando el atributo “device-width”, que es 
+        equivalente al 100% del ancho de la pantalla del  dispositivo, 
+        independiente de su tamaño, posición o resolución.
+        
+        También podemos controlar la escala de la vista con el atributo 
+        “initial-scale“. El sitio se mostrará con su tamaño original.
+        
+        Para asegurar compatibilidad con la mayor cantidad de pantallas y 
+        navegadores móviles, se recomienda utilizar este formato como base 
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+    <style>
+        h1
+        {
+            font-size: 3rem;
+            text-align: center;
+            line-height: 3rem;
+        }
+
+        body 
+        { 
+            background: lemonchiffon;
+            color: mediumblue;
+        }
+
+        @media (max-width: 500px) 
+        {
+            body 
+            {
+                background: lightsteelblue;
+                color: lightyellow;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Por debajo de 500 pixeles, cambio de color!!</h1>
+</body>
+</html>
