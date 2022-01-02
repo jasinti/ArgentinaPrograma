@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        ECMAScript 6 también se conoce como ES6 y ECMAScript 2015.
+
+        Algunas personas lo llaman JavaScript 6.
+
+        Algunas de las nuevas funciones de ES6:
+
+        JavaScript let
+        JavaScript const
+        Funciones de flecha(arrows) de JavaScript
+        Clases de JavaScript(objetos)
+        
+     -->
+
+     <h3>Declaracion let</h3>
+     <p>La declaración let le permite declarar una variable con alcance de bloque.</p>
+
+     <p id="demo"></p>
+
+    <script>
+        var  numero = 10; // Aqui(en este bloque delimitado por llaves) numero es 10
+        
+        {  
+            let numero = 2; // Aqui numero es 2
+            document.getElementById("demo").innerHTML = numero;
+        }
+        
+        // document.getElementById("demo").innerHTML = numero;// Aqui numero es 10
+    </script>
+
+
+    <h3>Declaracion const</h3>
+    <p>La declaración const le permite declarar una constante. Las constantes 
+        son similares a las variables let, excepto que el valor no se puede cambiar.</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        var  numero2 = 10; // Aqui(en este bloque delimitado por llaves) numero2 es 10
+        
+        {  
+            const numero2 = 2; // Aqui numero2 es 2
+        }
+        
+        document.getElementById("demo2").innerHTML = numero2;// Aqui numero2 es 10
+    </script>
+    
+
+    <h3>Valores de parámetros predeterminados</h3>
+    <p>ES6 permite que los parámetros de función tengan valores predeterminados.</p>
+
+
+    <p id="demo3"></p>
+
+    <script>
+        function miFuncion(x, y = 10) 
+        {
+            // y es 10 si no se pasa su valor como parametro a la funcion
+            return x + y;
+        }
+
+        document.getElementById("demo3").innerHTML = miFuncion(5);
+    </script>
+</body>
+</html>

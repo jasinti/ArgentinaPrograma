@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            width: 35%;
+            height: 10vh;
+            background-color: blanchedalmond;
+            text-align: center;
+            line-height: 10vh;
+            font-family: 'Trebuchet MS';
+        }
+    </style>
+</head>
+<body>
+    <h2>Encontrar elementos HTML por selector CSS</h2>
+
+    <p class="intro">El DOM es muy util.</p>
+    <p class = "intro"> Este ejemplo demuestra el método <b> querySelectorAll </b>. </p>
+
+    <div id="demo"></div>
+    
+    
+    <!-- captura el parrafo por su selctor CSS y coloca su contenido en el
+    div cuyo id="demo" mediante el atributo innerHTML -->
+    <script>
+        var x = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML = 
+        'El primer párrafo (índice 0) con class = "intro": ' + x[0].innerHTML;
+    </script>
+
+</body>
+</html>

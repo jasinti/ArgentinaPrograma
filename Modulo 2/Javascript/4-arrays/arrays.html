@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Arrays</title>
+	<meta charset='utf-8' />
+	<script type="text/javascript">
+		//defino e inicializo el array llamado datos
+		// datos = new Array();
+		// datos[0] = 10;
+		// datos[1] = 'Dia';
+		// datos[2] = 2.5;
+		// datos[3] = 'Noche';
+		// datos[4] = 'Hola';
+		// datos.push('Chau');
+
+		datos = new Array(10,'Dia',2.5,'Noche','Hola','Chau');
+
+		document.write('Contenido de la celda 1: '+datos[1]+'<br />');
+
+		document.write('<hr />');
+
+		//recorro el array con un for y muestro su contenido
+		for (let i = 0; i < datos.length; i++) 
+		{
+			document.write('Indice: ' + i + ' Contenido: '+datos[i] + '<br />');
+		}
+
+		document.write('<hr />');		
+
+		persona = new Object();
+		persona.Nombre='Juan';
+		persona.Apellido='Perez';
+		persona.Edad=25;
+
+		document.write('Nombre de la persona: ' +  persona.Nombre +'<br />');
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>

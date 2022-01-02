@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        El alcance determina la accesibilidad (visibilidad) de las variables.
+
+        Alcance de la función de JavaScript
+        En JavaScript hay dos tipos de alcance:
+
+        1)Alcance local
+        2)Alcance global
+        3)JavaScript tiene un alcance de función: cada función crea un nuevo alcance.
+
+        El alcance determina la accesibilidad (visibilidad) de estas variables.
+
+        Las variables definidas dentro de una función no son accesibles (visibles) 
+        desde fuera de la función.
+     -->
+
+     <h3>Alcance Local</h3>
+
+     <p>Fuera de  miFuncion() marca es undefined.</p>
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <script>
+        miFuncion();
+
+        function miFuncion() 
+        {
+            var marca = "Ford";
+            document.getElementById("demo1").innerHTML = typeof marca + " " + marca;
+        }
+        
+        document.getElementById("demo2").innerHTML = typeof marca;
+    </script>
+</body>
+</html>

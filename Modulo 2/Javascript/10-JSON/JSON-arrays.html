@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Bucle a través de un array usando un bucle for:</h3>
+
+    <p id="demo"></p>
+
+    <script>
+        var myObj, i, x = "";
+        myObj = {
+                    "nombre":"Juan",
+                    "edad":30,
+                    "autos":[ "Ford", "BMW", "Fiat" ]
+                };
+
+        for (i = 0; i < myObj.autos.length; i++) 
+        {
+            x += myObj.autos[i] + "<br>";
+        }
+        
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <h3> Recorrer arrays dentro de arrays. </h3>
+    <p id="demo2"></p>
+
+    <script>
+        var myObj, i, j, x = "";
+        myObj = {
+                    "nombre":"John",
+                    "edad":30,
+                    "autos": [
+                                {"nombre":"Ford", "modelos":["Fiesta", "Focus", "Mustang"]},
+                                {"nombre":"BMW", "modelos":["320", "X3", "X5"]},
+                                {"nombre":"Fiat", "modelos":["500", "Panda"] }
+                            ]
+                }
+        
+        for (i in myObj.autos) 
+        {
+            x += "<h4>" + myObj.autos[i].nombre + "</h4>";
+            
+            for (j in myObj.autos[i].modelos) 
+            {
+                x += myObj.autos[i].modelos[j] + "<br>";
+            }
+        }
+        
+        document.getElementById("demo2").innerHTML = x;
+    </script>
+
+
+    <h3> Cómo modificar un valor de array de un objeto JSON. </h3>
+    <p id="demo3"></p>
+
+    <script>
+        var myObj, i, x = "";
+        myObj = {
+                    "nombre":"Juan",
+                    "edad":30,
+                    "autos":[ "Ford", "BMW", "Fiat" ]
+                };
+        
+        myObj.autos[1] = "Mercedes";
+
+        for (i in myObj.autos) 
+        {
+            x += myObj.autos[i] + "<br>";
+        }
+        
+        document.getElementById("demo3").innerHTML = x;
+    </script>
+
+
+    <h3> Cómo eliminar propiedades de un array. </h3>
+    <p id="demo4"></p>
+
+    <script>
+        var myObj, i, x = "";
+        
+        myObj = {
+                    "nombre":"Juan",
+                    "edad":30,
+                    "autos": ["Ford","BMW","Fiat"]
+                }
+        
+        delete myObj.autos[1];
+
+        for (i in myObj.autos) 
+        {
+            x += myObj.autos[i] + "<br>";
+        }
+        
+        document.getElementById("demo4").innerHTML = x;
+    </script>
+</body>
+</html>

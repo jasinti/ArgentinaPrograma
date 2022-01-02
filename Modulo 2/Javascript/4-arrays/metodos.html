@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>toString()</h3>
+
+    <p> El método toString () devuelve una array como una cadena separada por 
+        comas: </p>
+
+    <p id="demo" style="color: blueviolet;"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        document.getElementById("demo").innerHTML = frutas.toString();
+    </script>
+
+    
+
+    <h3>pop()</h3>
+
+    <p> El método pop () elimina el último elemento de un array:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.pop();
+        document.getElementById("demo2").innerHTML = frutas;
+    </script>
+
+    <h3>push()</h3>
+
+    <p> El método push () agrega un nuevo elemento en el array:</p>
+
+    <p id="demo3"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva"];
+        frutas.push("Mandarina");
+        document.getElementById("demo3").innerHTML = frutas;
+    </script>
+
+    
+
+    <h3>sort y reverse()</h3>
+
+    <p> El método sort () ordena los elmentos del array.</p>
+
+    <p id="demo4"></p>
+    <p id="demo4bis"></p>
+
+    <script>
+        var frutas = ["Banana", "Naranja", "Manzana", "Uva", "Limon", "Kiwi"];
+        
+        document.getElementById("demo4").innerHTML = frutas.sort();
+        document.getElementById("demo4bis").innerHTML = frutas.reverse();
+    </script>
+
+
+</body>
+</html>

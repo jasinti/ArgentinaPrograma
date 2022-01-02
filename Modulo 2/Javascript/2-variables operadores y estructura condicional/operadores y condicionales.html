@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- comentario en HTML -->
+	<title>Operadores</title>
+	<meta charset='utf-8' />
+	<script>
+		document.write('Operadores Aritmeticos: + - * /<br />');
+		
+		document.write('Operadores Relacionales: > < >= <= == != <br />');
+		
+		document.write('Operadores Incrementales: <br />');
+
+		numero = 1;
+		document.write('numero = ' + numero + '<br />');
+		numero ++;//le suma al valor anterior q tenia la variable
+		document.write('numero = ' + numero + '<br />');
+		numero = numero + 5;//le sumo 5 al ultimo valor de la variable
+		document.write('numero = ' + numero + '<br />');
+		numero --;//resta 1 al ultimo valor de la variable
+		document.write('numero = ' + numero + '<br />');
+		numero *= 5; // numero = numero * 5
+		document.write('numero = ' + numero + '<br />');
+
+		document.write('Operadores Logicos: <br />');
+		//ingresar por teclado y guardar en 2 variables el dia de la semnana y 
+		//el estado del tiempo, el cual puede ser lluvioso o despejado.
+		//Si es un sabado lluvioso, mostrar el mensaje "Me quedo en casa", sino
+		//mostrar el mensaje "salgo a pasear"
+
+		//ingreso de datos y almacenamiento en variables
+		dia = prompt('Decime el dia porfa: ');
+		clima = prompt('lluvioso o despejado??: ');
+
+		//logica de decision: estructura de control de ejecucion del codigo: if- else
+		if (dia == 'sabado' || clima == 'lluvioso') 
+		{
+			document.write('Me quedo en casa!!');
+		} 
+		else
+		{
+			document.write('Salgo a pasear!!');
+		}
+		
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

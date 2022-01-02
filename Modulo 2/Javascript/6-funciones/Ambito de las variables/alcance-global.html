@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Una variable declarada fuera de una función se convierte en GLOBAL .
+
+        Una variable global tiene alcance global : todos los scripts y funciones 
+        de una página web pueden acceder a ella. 
+     -->
+
+     <h3>Alcance Global</h3>
+
+     <p> 
+         Se puede acceder a una variable GLOBAL desde cualquier script o función. 
+    </p>
+
+     <p id="demo"></p>
+     
+     <script>
+        var marca = "Renault";
+        miFuncion();
+        
+        function miFuncion() 
+        {
+            document.getElementById("demo").innerHTML = "Puedo ver " + marca;
+        }
+     </script>
+</body>
+</html>

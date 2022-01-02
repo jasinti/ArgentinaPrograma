@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Arrow Function</h2>
+
+    <p> Este ejemplo muestra una función arrow con un parámetro. </p>
+
+    <p id="demo"></p>
+
+    <script>
+        var saludar;
+
+        saludar = (val) => "Hola " + val;
+
+        //Si solo tiene un parámetro, también se puede omitir los paréntesis:
+        //saludar = val => "saludar " + val;
+
+        document.getElementById("demo").innerHTML = saludar("Argentina!");
+    </script>
+</body>
+</html>

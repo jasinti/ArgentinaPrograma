@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            width: 35%;
+            height: 10vh;
+            background-color: blanchedalmond;
+            text-align: center;
+            line-height: 10vh;
+            font-family: 'Trebuchet MS';
+        }
+    </style>
+</head>
+<body>
+    <h2>Encontrar elementos HTML por ID</h2>
+
+<p id="intro">Hola Mundo!</p>
+<p>Este ejemplo demuestra el método <b> getElementById </b>.</p>
+
+<div id="demo"></div>
+<!-- captura el parrafo cuyo id="intro" y coloca su contenido en el
+otro parrafo cuyo id="demo" mediante el atributo innerHTML -->
+<script>
+    
+    var myElement = document.getElementById("intro");
+    document.getElementById("demo").innerHTML = 
+    "El texto del párrafo de introducción es " + myElement.innerHTML;
+</script>
+
+</body>
+</html>
