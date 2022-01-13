@@ -1,0 +1,187 @@
+.mat-card {
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 20px;
+}
+.mat-card#first-card {
+    padding: 0;
+}
+.profile-image {
+    border-radius: 50%;
+    width: 152px;
+    height: 152px;
+    margin-top: -110px;
+    z-index: 1;
+}
+div#info-actions {
+   display: flex; 
+}
+div#info-actions button {
+    margin-right: 8px;
+}
+div#info-contact span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+div#info-contact span a {
+    color: #0a66c2;
+    touch-action: manipulation;
+    text-decoration: none;
+}
+div#info-company {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+div#info-data {
+    display: flex;
+    justify-content: space-between;
+}
+div#info-data h1 {
+    font-size: 1.8rem;
+    display: inline;
+    font-weight: 500;
+    line-height: 1.25;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+div#info-data ul#info-details {
+    width: 232px;
+    list-style: none;
+    flex-shrink: 0;
+}
+div#info-data ul#info-details li a {
+    color: black;
+    display: flex;
+    text-decoration: none;
+}
+div#info-data ul#info-details li a h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    align-self: center;
+    vertical-align: baseline;
+}
+div#info-data ul#info-details li a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+ul.items-list {
+    list-style: none inside;
+}
+ul.items-list li {
+    display: flex;
+    margin: 10px 0;
+}
+ul.items-list li div.data-container {
+    flex-grow: 1;
+}
+ul.items-list li div.data-container a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+ul.items-list li div.data-container a div.logo-image-container {
+    margin: 10px 0;
+}
+ul.items-list li div.data-container a div.logo-image-container img.logo-image {
+    height: 60px;
+    width: 60px;
+}
+ul.items-list li div.data-container a div.list-info {
+    margin: 0 10px;
+}
+ul.items-list li div.data-container a div.list-info h3 {
+    color: black;
+    margin: 10px;
+}
+ul.items-list li div.data-container a div.list-info h4, ul.items-list li div.data-container a div.list-info time {
+    color: gray;
+    margin: 0 5px;
+}
+ul.items-list li div.data-container a div.list-info p {
+    color: black;
+    margin: 0 5px;
+}
+ol.items-list {
+    list-style: none inside;
+}
+ol.items-list li div.aptitude-info a {
+    text-decoration: none;
+    color: grey;
+}
+ol.items-list li div.aptitude-info a span {
+    color: black;
+}
+div.achivements {
+    display: flex;
+    position: relative;
+    padding: 16px 0 0 12px;
+}
+div.achivements h3 {
+    color: #0a66c2;
+    min-width: 64px;
+    text-align: right;
+    line-height: 36px;
+    margin-top: -3px;
+    padding-right: 12px;
+    font-size: 2rem;
+}
+div.achivements div.project-title h3 {
+    font-size: 1.4rem;
+    text-align: center;
+}
+div.achivements ul.project-list li {
+    display: inline;
+}
+.card-titles {
+    display: flex;
+}
+.card-titles h2 {
+    flex: 10;
+    margin: auto;
+}
+.card-titles .btn-edit {
+    flex: 1;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    text-align: end;
+}
+#info-img {
+    display: flex;
+}
+.btn-right {
+    display: flex;
+    align-self: flex-end;
+}
+.fa-button,.fa {
+    color: black;
+    display: block;
+    height: 2.4rem;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+}
+.fa-button:hover,.fa:hover {
+    background: gray;
+}
+div#profile-background {
+    display: flex;
+    z-index: 1;
+}
+div#profile-background img {
+    width: 100%;
+    border-radius: 32px 32px 0 0;
+}
+.data-control{
+    display: flex;
+}
+
+.mr-auto{
+    margin-right: 0!important;
+    margin-left: auto!important;
+}
