@@ -1,0 +1,122 @@
+Angular(2010/2016-> Google) es un framework para el desarrollo de aplicaciones web. 
+
+Divide un proyecto en componentes que son reutilizados en proyectos de gran porte.
+
+--------------------------------------------------------------------
+
+Instalación de Angular CLI
+Para instalar este software lo hacemos desde la misma línea de comandos de Node.js (por eso lo instalamos primero), debemos ejecutar el siguiente comando:
+
+npm install -g @angular/cli
+
+Para ver la version:
+ng version o ng --version
+ng v
+ng -v
+
+Documentacion oficial : angular.io
+
+-----------------------------------------------
+
+SPA --> 1 PAGINA WEB --> VARIAS VISTAS
+
+--------------------------------------------------------
+Proyecto1
+
+Para crear un proyecto:
+
+Desde la terminal integrada de VSC ejecutar el siguiente comando:
+
+ng new proyecto1
+
+
+
+Se nos pide si queremos crear rutas, elegiremos 'N'.
+Luego seleccionaremos que utilizaremos archivos CSS para los estilos.
+
+Este comando crea la carpeta proyecto1 e instala una gran de archivos(350 megas),
+lo que demanda mas de 5 minutos.
+
+Para ejecutar: ir a la carpeta del proyecto y lanzar el siguiente comando:
+
+ng serve -o
+
+2 minutos
+
+
+Para modificar la vista por defecto:
+
+En la carpeta 'proyecto1' hay una subcarpeta llamada 'src' y dentro de esta una llamada 'app', busquemos el archivo 'app.component.html' y  borramos todas las líneas y escribimos:
+
+<style>
+  body{
+    background-color: burlywood;
+  }
+
+  h1{
+    color: cornsilk;
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h1>
+    Hola!, este es el Proyecto Nro1 en Angular en Argentina Programa
+  </h1>  
+</body>
+
+Guardamos los cambios y sin refrescar la pagina web los vemos actualizados.
+
+------------------------------------------------------------
+
+Analisis de la Estructura de un Proyecto:
+
+En Angular la pieza fundamental es el componente. Una aplicación se construye a base de un conjunto de componentes (por ejemplo: un menú, lista de usuarios, login, tabla de datos, calendario, formulario de búsqueda, etc.)
+
+
+Angular CLI nos crea un único componente llamado 'AppComponent' que se distribuye en 4 archivos:
+
+app.component.ts
+app.component.html
+app.component.css
+app.component.spec.ts
+
+Todos estos archivos se localizan en src/app.
+
+En Angular se programa utilizando el lenguaje TypeScript.
+
+
+a) 'app.component.ts'
+
+Mediante el decorador @Component indicamos los otros archivos que pertenecen a este componente.
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'proyecto1';
+}
+
+
+b) 'app.component.html' tiene la parte visual de nuestro componente 'AppComponent'.
+
+
+c) 'app.component.css' almacena todos los estilos que se van a aplicar solo a dicho componente('AppComponent').
+
+
+d) 'app.component.spec.ts' que tiene por objetivo definir código de testing para verificar el correcto funcionamiento del componente.
+
+e) 'app.module.ts'
+En la propiedad 'declarations' se le pasa un vector con un elemento que es nuestro componente 'AppComponent'.
+La aplicación mínima en Angular debe tener un módulo y dentro de dicho módulo como mínimo un componente.
+
+
+f) En la carpeta raíz del proyecto hay un archivo llamado 'styles.css' donde podemos definir estilos que se aplicarán en forma global a todas los componentes de nuestra aplicación.
+
+
+
+
