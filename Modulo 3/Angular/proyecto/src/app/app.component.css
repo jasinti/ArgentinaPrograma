@@ -1,0 +1,63 @@
+/* Aplicacion 3 */
+
+/* body
+{
+    background-color: lightgoldenrodyellow;
+    height: 100vh;
+    text-align: center;
+}
+
+div
+{
+    border: mediumvioletred 0.25rem solid;
+    width: 40vw;
+    background-color: oldlace;
+    margin: auto;
+}
+
+p
+{
+    font-weight: bold ;
+}
+
+span
+{
+    color: lightcoral;
+}
+
+th
+{
+    color: skyblue;
+} */
+
+
+/* Aplicacion 5 */
+
+/* span{ 
+    font-weight: bolder;
+    color: chocolate;
+}
+
+#label2{ vertical-align: top;} */
+
+
+
+
+/* Aplicacion 6 */
+table
+{
+    width: 40%;
+}
+
+th,td,tr
+{
+    border: 0.2rem solid black;
+    text-align: center;
+}
+
+th
+{
+    background-color: bisque;
+}
+
+
