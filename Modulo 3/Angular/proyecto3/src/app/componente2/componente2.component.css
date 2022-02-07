@@ -1,0 +1,25 @@
+div
+{
+    width: 90%;
+    height: 90%;
+    border: chocolate .25rem solid;
+    background-color: lemonchiffon;
+    padding: 1rem;
+}
+
+h1
+{
+    color: lightsalmon;
+}
+
+p
+{
+    text-align: justify;
+}
+
+img
+{
+    width: 100%;
+    margin: auto;
+}
+
