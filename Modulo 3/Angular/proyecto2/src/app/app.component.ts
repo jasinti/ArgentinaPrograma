@@ -1,4 +1,4 @@
-//Aplicacion 9: Lectura de API Rest
+//Aplicacion 7: Lectura de API Rest
 import { Component } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
