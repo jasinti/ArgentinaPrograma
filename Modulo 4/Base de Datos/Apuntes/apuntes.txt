@@ -1,0 +1,11 @@
+
+Cliente administrativo de bases mySQL  --> MySQL Workbench --> mysql.com 
+
+Emulador de Servidor Web  --> XAMPP --> xampp.org
+
+Instalacion
+
+1) XAMPP
+1) MySQL Workbench
+
+

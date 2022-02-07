@@ -1,0 +1,29 @@
+SQL 
+
+--> DDL: lenguaje de definicion de datos
+	--> create
+	--> alter
+	--> drop
+--> DML: lenguaje de manipulacion de datos
+	--> select
+	--> insert
+	--> update
+	--> delete
+
+operadores
+	--> aritmeticos: + - * /
+	--> relacionales: >  <  >=  <=  = 	!=  <>
+	--> logicos: and or not
+	--> rango: between, not between
+	--> lista: in, not in
+	--> similitud: like, not like, rlike
+	--> nulidad: is null, is not null
+
+clausulas
+	--> from
+	--> where: filtro de registros de una tabla
+	--> order by: ordenamiento de valores
+	--> group by
+	--> having
+
+	
