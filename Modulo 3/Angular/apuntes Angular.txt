@@ -119,4 +119,51 @@ f) En la carpeta raíz del proyecto hay un archivo llamado 'styles.css' donde po
 
 
 
+Proyecto 2
+Aplicacion 7: Lectura de API Rest
+
+
+
+Proyecto 3
+Aplicacion 8: Routing - SPA
+
+Angular incluye un módulo especial si queremos administrar nuestra aplicación mediante rutas.
+
+Las rutas están dadas por la url, ejemplos de rutas pueden ser:
+
+http://localhost:4200/articulos
+http://localhost:4200/ventas
+http://localhost:4200/proveedores
+
+Luego según la ruta especificada mostramos una vista distinta, generalmente indicando un nombre de componente.
+
+Lo más conveniente es utilizar la aplicación Angular CLI (Router) para que nos ayude con la generación del módulo de rutas.
+
+Implementamos una aplicación que muestre dos enlaces en una barra de vinculos en la parte superior de la página que acceda a 2 vistas diferentes.
+
+1) Desde la línea de comandos de Node.js procedemos a crear el proyecto y solicitaremos que nos cree el archivo de routing:
+
+e:\angular> ng new proyecto3
+
+La primera opción que nos muestra Angular CLI [Would you like to add Angular routing?] respondemos 'y' (si) para que cree las rutas.
+
+La forma alternativa es durante la creacion del proyecto:
+e:\angular> ng new proyecto3 --routing
+
+En la carpeta app se crea el archivo 'app-routing.module.ts'
+
+2) Desde la terminal de VSC creamos cada una de los componentes.
+
+e:\angular\proyecto3> ng generate component componente1
+e:\angular\proyecto3> ng generate component componente2
+
+Luego codificamos el .ts y la vista .html de cada componente
+(que representara cada vista).
+
+3) En el archivo  'app-routing.module.ts' modificamos y cargamos las dos rutas de nuestra aplicación, importamos los componentes que visualizan dichas rutas e importamos el módulo AppRoutingModule'.
+
+
+4) Modificamos el componente principal 'app.component.html':
+mediante la etiqueta 'router-outlet' indicamos el lugar que debe mostrar el componente especificado por la ruta configurada en el archivo 'app-routing.module.ts'
+Para cambiar de ruta mediante enlaces debemos iniciar la propiedad 'routerLink' asignando la ruta respectiva.
 
