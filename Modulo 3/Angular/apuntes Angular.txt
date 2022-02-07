@@ -21,7 +21,17 @@ Documentacion oficial : angular.io
 SPA --> 1 PAGINA WEB --> VARIAS VISTAS
 
 --------------------------------------------------------
+
+
 Proyecto1
+Aplicacion 1: Hola Mundo
+Aplicacion 2: Interpolacion
+Aplicacion 3: Directivas *ngIf y *ngFor
+Aplicacion 4: Manejo de Eventos
+Aplicacion 5: Directiva ngModel
+Aplicacion 6: CRUD con directiva ngModel
+
+
 
 Para crear un proyecto:
 
