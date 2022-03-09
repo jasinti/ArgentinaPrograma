@@ -1,0 +1,16 @@
+Encapsulamiento
+	--> es el ocultamiento del estado de un objeto.
+	--> permite proteger el valor de los atributos.
+
+	--> modificadores de visibilidad
+		--> public: es visible en cualquier parte del proyecto
+		--> private: es visible en la propia clase dnd se define
+		--> default o package: es visible dentro del mismo package
+		--> protected: es visible dentro de la misma clase y por las clases hijas.
+
+	--> pasos
+		--> 1er paso: es hacer private el atributo a encapsular.
+		--> 2do paso: crear los metodos publicos getters y setters
+		q permitiran acceder al atributo privado dsd otras clases.
+		--> 3er paso: definir reglas de negocio en los setters.
+		--> 4to paso: llamar al setter en todos los metodos q manipulen el atributo privado.

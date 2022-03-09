@@ -1,0 +1,25 @@
+POO
+	--> todo es un objeto
+	--> todo objeto pertenece a una clase
+	--> una clase se define por:
+			--> atributos: son las caracteristicas
+			q todos los objetos de una misma clase
+			comparten.
+			--> metodos: son las acciones
+			q todos los objetos de una misma clase
+			pueden realizar.
+	--> clase Auto(PascalCase)
+			--> atributos: marca, modelo, color, precio, cantidadDePuertas(camelCase)
+			--> metodos: acelerar, frenar, chocar
+	--> clase CajaDeAhorro
+			--> atributos: cbu, moneda, saldo, descubierto 
+			--> metodos: extraer, depositar, transferir, informarUltimosMovimientos
+
+	-------------------------------------------------------------
+	Estado de un objeto: es el conjunto de valores q toman sus atributos
+	en un momento dado.
+
+	Comportamiento de un objeto: es el conjunto de metodos q un objeto
+	ejecuta.
+
+	El estado de un objeto DEBERIA cambiar a traves del comportamiento
