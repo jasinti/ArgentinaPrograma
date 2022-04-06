@@ -1,0 +1,213 @@
+Dependencias para conectar springboot a mysql mediante jpa con hibernate
+1)	--> se hace boton derecho sobre carpeta dependencies de nuestro proyecto
+	--> luego elegir add dependency
+	--> en el cuadro de dialogo en el input de query buscar las siguientes dependencias:
+
+a) 	spring data jpa(org.springframework.data:spring-data-jpa / 2.6.3[jar])
+a2) org.springframework.data:spring-boot-starter-data-jpa  / 2.6.6[jar] - local
+b) 	mysql driver(spring-boot-starter-data-jpa / 8.0.20[jar])
+c)  h2 database(org.h2database:h2database)
+
+nota: tb podria agregarse estas dependencias al comienzo de un proyecto con initialz
+
+La bd debe estar creada de antemano y debe estar vacia(nombre de ejemplo: spring_jpa)
+
+------------------------------------------------------------------------------------
+
+2) Configurar la conexion a la bd en el archivo application.properties(esta dentro de la carpeta Other Sources)
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/spring_jpa?useSSL=false&serverTimezone=UTC
+spring.datasource.username=root
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+-----------------------------------------------------------------
+
+3) Editar la clase de entidad Persona
+ nota: para un mejor autocompletado se puede agregar la dependencia
+ org.springframework.boot:spring-boot-starter-data-jpa
+
+
+ package com.example.demoApi4.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+
+/**
+ *
+ * @author 
+ */
+@Getter @Setter
+@Entity
+public class Persona {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String nombre;
+    private String apellido;
+
+    public Persona() {
+    }
+
+    public Persona(int id, String nombre, String apellido) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+    
+}
+
+-----------------------------------------------------------
+
+4) Editar la clase Controller
+
+
+package com.example.demoApi3.Controller;
+
+import com.example.demoApi3.model.Persona;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+public class Controller {
+    
+    List<Persona> listaPersonas = new ArrayList();
+    
+    @PostMapping("new/persona")
+    public void agregarPersona(@RequestBody Persona p) {
+        listaPersonas.add(p);
+    }
+    
+    @GetMapping("ver/personas")
+    @ResponseBody
+    public List<Persona> verPersonas() {
+        return listaPersonas;
+    }
+    
+}
+
+---------------------------------------------------------------
+
+5) Ejecutar la app y verificar que se crearon las tablas:
+hibernate_secuencia --> indica el proximo nro de secuencia 
+persona -> con los campos id, nombre y apellido
+
+nota: en localhost:8080/h2-database
+se puede testear la conexion, hacer pruebas en la app con una base integrada, etc.
+
+---------------------------------------------------------------
+
+6) Para la conexion con base de datos mediante JPA 
+
+Agregamos a nuestro Source Packages 2 paquetes nuevos:
+com.example.demoApi4.repository
+com.example.demoApi4.service
+
+En com.example.demoApi4.repository, agregamos la interface PersonaRepository
+la cual sera el repositorio de nuestra app. En decir, esta capa se encargara de la conexion de nuestra logica de negocio con JPA.
+
+En la capa com.example.demoApi4.service estara la logica de negocio de mi app.
+Aqui agregamos la interface IPersonaService(que tendra los metodos del CRUD) y la clase q la implementara, es decir, PersonaService.
+
+nota: para implementar rapidamente los metodos abstractos de la interface, pararse sobre la clase PesonaService, luego alt+enter y seleccionar "implement all abstract methods".
+
+Codificacion IPersonaService:
+
+package com.example.demoApi4.service;
+
+import com.example.demoApi4.model.Persona;
+import java.util.List;
+
+public interface IPersonaService {
+    
+    public List<Persona> verPersonas();
+    
+    public void crearPersona(Persona per);
+    
+    public void borrarPersona(Long id);
+    
+    public Persona buscarPersona(Long id);
+}
+
+
+Codificacion : PersonaService
+
+package com.example.demoApi4.service;
+
+import com.example.demoApi4.model.Persona;
+import com.example.demoApi4.repository.PersonaRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class PersonaService implements IPersonaService{
+    
+    //inyecto la dependencia del repositorio mediante la annotation @AutoWired.
+    //Asi evito crear objetos de conexion como se suele hacer con JDBC
+    @Autowired
+    public PersonaRepository persoRepo;
+
+    @Override
+    public List<Persona> verPersonas() {
+        //el metodo findAll de hibernate nos trae todos los registros de la tabla
+        return persoRepo.findAll();
+    }
+
+    @Override
+    public void crearPersona(Persona per) {
+        //Este metodo save crea o modifica los datos de una persona
+        persoRepo.save(per);
+    }
+
+    @Override
+    public void borrarPersona(Long id) {
+        persoRepo.deleteById(id);
+    }
+
+    @Override
+    public Persona buscarPersona(Long id) {
+        //si no encuentra la persona, entonces devuelve null
+        return persoRepo.findById(id).orElse(null);
+    }
+    
+}
+
+
+----------------------------------------------------------------------------
+7) Ejecucion y prueba con Postman
+
+nota importante: agregar las siguientes dependencias a nuestro proyecto si surge el error siguiente al momento de ejecutar la app:
+"Correct the classpath of your application so that it contains a single, compatible version of org.springframework.data.util.TypeInformation"
+
+
+	<dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-hateoas</artifactId>
+    </dependency>
+	<dependency>
+	  <groupId>org.springframework.data</groupId>
+	  <artifactId>spring-data-commons</artifactId>
+	  <version>2.6.3</version>
+	</dependency>
+
+
+Probar alta, consulta y baja con Postman.
+
+nota: Al realizar post podemos omitir el id ya que JPA genera automaticamente el numero de secuencia.
+
+
+
