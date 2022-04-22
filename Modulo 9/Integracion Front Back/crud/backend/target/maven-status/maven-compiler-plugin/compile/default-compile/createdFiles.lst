@@ -1,0 +1,7 @@
+com\tutorial\crud\entity\Producto.class
+com\tutorial\crud\dto\Mensaje.class
+com\tutorial\crud\service\ProductoService.class
+com\tutorial\crud\CrudApplication.class
+com\tutorial\crud\dto\ProductoDto.class
+com\tutorial\crud\repository\ProductoRepository.class
+com\tutorial\crud\controller\ProductoController.class
