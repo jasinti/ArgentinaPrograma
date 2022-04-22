@@ -1,0 +1,9 @@
+1) Para ejecutar Spring
+	--> Tener previamente levantado el servicio de MySQL y creada la 	base de datos "abmc"(vacia, sin tablas).
+	--> hacer run file sobre la clase ejecutable(que posee metodo main).
+
+2) Para ejecutar Angular
+	--> ng serve -o
+
+Va a solicitar dependencias de node.
+Se puede instalar mediante npm install(instala la carpeta node module).
